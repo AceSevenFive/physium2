@@ -4,6 +4,8 @@
 void WriteCheckerboard(unsigned short color1, unsigned short color2, int x, int y, int width, int height);
 void WriteCompoundGlyph(const char string[], unsigned int length, unsigned int spacing, unsigned short color, int x, int y);
 void WriteCompoundGlyphStates(const char string[], unsigned int length, unsigned int spacing, unsigned short color, int x, int y);
+void WriteCursor(int x, int y);
+void WritePeriodicTable(int cposx, int cposy);
 
 #define SOLID_COLOR (unsigned short)0xFFFE
 #define LIQUID_COLOR (unsigned short)0x9E7F
