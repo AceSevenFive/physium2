@@ -1,12 +1,17 @@
 #include "mathlib.h"
 
-int AddWithOverflow(int term1, int term2, int maxval) {
-	int sum = term1;
-	for(int i = 0; i < term2; i++) {
-		sum++;
-		if(sum > maxval) {
-			sum = 0;
-		}
+int AddWithOverflow(short term1, short term2, short maxval) {
+	return (term1 + term2) % maxval;
+}
+
+int TernaryValueCompare(int term1, int term2) {
+	if(term1 > term2) {
+		return 1;
 	}
-	return sum;
+	else if(term2 > term1) {
+		return -1;
+	}
+	else {
+		return 0;
+	}
 }
